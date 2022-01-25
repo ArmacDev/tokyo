@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body{
+    font-family: 'Montserrat';
+    font-weight: 400;
+}
+
+main{
+    max-width: 1280px;
+}
+input[type=text], textarea{
+    width: 100%;
+    margin: 8px 0;
+    box-sizing: border-box;
+    padding: 12px 20px;
+    resize: none;
+}
+
+input[type=submit], input[type=reset]{
+    width: 100%;
+    cursor: pointer;
+    padding: 14px 20px;
+    background-color: #FFF38A;
+    border: none;
+    border-radius: 5px;
+}
+input[type=submit]:hover{
+    opacity: .3;
+}
+
+input::placeholder, textarea::placeholder{
+    font-family: 'Montserrat';
+}
+
