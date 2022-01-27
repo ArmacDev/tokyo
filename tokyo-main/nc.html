@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nous Contacter</title>
+    <link rel="stylesheet" href="css/nc.css">
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <main class="container">
+        <nav>
+            <div id="container">
+                <div class="l">
+                    <h1 class="to"> <span class="logo"></span> 東京都</h1>
+                </div>
+                <ul>
+                    <li><a href="index.html" class="nav-a">Accueil</a></li>
+                    <li><a href="attractions.html" class="nav-a">Les Attractions</a></li>
+                    <li><a href="photo.html" class="nav-a">Galerie Photo</a></li>
+                    <li><a href="nc.html" class="nav-a">Nous Contacter</a></li>
+                </ul>
+                <div class="search-bar">
+                    <input class="search" type="text" placeholder="Recherche ..." id="searchBox" onchange="SearchQuery(this.value)"><span><a id="searchButton" href="https://www.google.co.uk" target="_blank" onclick="buttonClick()" >o</a></span></input>
+                </div>
+            </div>
+        </nav>
+
+
+    <h2>N'hesitez pas a nous contacter en cas de question</h2>
+    <form action="mailto:arsene.carpentier@eleve.lyceefrancais.org.uk" method="post" enctype="multipart/form-data">
+        <label for="fname">Nom : </label>
+        <input class="in" type="text" id="fname" name="ContactName" placeholder="votre nom ..">
+    
+        <label for="email">Email : </label>
+        <input class="in" type="text" id="email" name="email" placeholder="Votre email ..">
+    
+        <label for="message">Message :</label>
+        <textarea class="in" name="message" id="" cols="30" rows="10" placeholder="votre message .."></textarea>
+      
+        <input class="in" type="submit" value="Envoyez !">
+    </form>
+</main>
+</body>
+</html>
