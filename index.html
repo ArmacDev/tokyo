@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/styles.css">
+
 </head>
 
 <body>
@@ -24,7 +25,9 @@
                 <li><a href="nc.html" class="nav-a">Nous Contacter</a></li>
             </ul>
             <div class="search-bar">
-                <input type="text" placeholder="Recherche ...">
+                <input type="text" placeholder="Recherche ..." id="searchBox" onchange="SearchQuery(this.value)">
+                <span><a href="http://www.google.com" onclick="buttonClick()" target="_blank"
+                        id="searchButton">O</a></span>
             </div>
         </div>
     </nav>
@@ -55,7 +58,7 @@
     </footer>
 
 
-
+    <script src="js/search.js"></script>
 </body>
 
 </html>

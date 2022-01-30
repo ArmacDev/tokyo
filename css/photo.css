@@ -5,6 +5,7 @@ body{
     font-size: 16px;
     background: #060447;
     color: #FFF38A;
+    overflow: hidden;
 }
 h1{
     font-weight: 800;
@@ -26,15 +27,52 @@ section{
     flex-direction: column;
     display: flex;
 }
-.titles h1{
-    font-style: normal;
+.titles{
+    height: 49px;
+    margin-bottom: 8px;
+    position: relative;
+    display: flex;
+    align-items: center ;
+}
+
+.titles h1{ 
     font-weight: bold;
     font-size: 40px;
     line-height: 49px;
+    transform: translate3d(0,0,0);
+    transition: transform 1s ease, opacity 1s ease;
+    position: absolute;
+    white-space: nowrap;
+    left: 0;
 }
-.years h2{
+h1:not(.active){
+    opacity: 0;
+    transform: translate3d(100%,0,0);
+}
+.leave{
+    opacity: 0;
+    transform: translate3d(-100%,0,0);
+}
+
+.years {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+h2:not(.active){
+    opacity: 0;
+    transform: translate3d(100%,0,0);
+}
+h2{
     font-size: 80px;
     font-weight: bold;
+    transform: translate3d(0,0,0);
+    transition: transform 1s ease, opacity 1s ease;
+    position: absolute;
+    left: 0;
+    margin-bottom: 270px;
+    
+    
 }
 #right{
     flex: 1;
@@ -42,6 +80,7 @@ section{
 .images{
     aspect-ratio: 2/3;
     position: relative;
+    overflow: hidden;
 }
 .image{
     width: 100%;
@@ -50,6 +89,7 @@ section{
     position: absolute;
     top: 0;
     left: 0;
+    transition: transform 1s ease;
 }
 nav.actions img{
     width: 22px;
@@ -67,13 +107,22 @@ nav.actions img{
 .left, .right{
     display: inline-block;
 }
-.descriptions{
+.description{
     margin-bottom: auto;
+    position: relative;
 }
-.descriptions p{
+.description  p{
     font-size: 20px;
     line-height: 30px;
     max-width: 422px;
+    transform: translate3d(0,0,0);
+    transition: transform 1s ease, opacity 1s ease;
+    position: absolute;
+    left: 0;
+}
+p:not(.active){
+    opacity: 0;
+    transform: translate3d(100%,0,0);
 }
 ul{
     display: flex;
@@ -90,7 +139,6 @@ ul li{
     position: absolute;
     background: #FFF38A;
     height: 1px;
-    width: 100px;
     left: 0;
     right: 32px;
     opacity: .3;
@@ -111,11 +159,33 @@ li:after{
     border-radius: 50%;
     opacity: 0.5;
     transform: translate(0,-50%);
+    transition: opacity 1s ease ;
 }
 li.active .line:after{
     transform: scaleX(1);
     
 }
 li.active:after{
+    opacity: 1;
+}
+
+li:first-child::before{
+    content: none;
+}
+
+
+.right{
+    transform: translate3d(100%,0,0);
+}
+.left{
+    transform: translate3d(-100%,0,0);
+}
+
+
+.leave:not(li){
+    transform: translate3d(-30%,0,0);
+}
+
+.js-arrow-left{
     opacity: 1;
 }

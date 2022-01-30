@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/photo.css">
     <title>Document</title>
-    <script src="js/main.js"></script>
+
 </head>
 
 <body>
@@ -15,52 +15,85 @@
         <section>
             <div id="left">
                 <div class="titles">
-                    <h1>Mont Fuji</h1>
+                    <h1 data-slide="1" class="active">Mont Fuji</h1>
+                    <h1 data-slide="2">Shibuya</h1>
+                    <h1 data-slide="3">Tokyo Tower</h1>
+                    <h1 data-slide="4">Kabuki</h1>
+                    <h1 data-slide="5">Sensō Ji</h1>
                 </div>
                 <div class="description">
-                    <p>Une motagne culminant a 3776m. Sa traduction en Kanji signifie abondance et richesse. Il existe
-                        pour les plus aguéris un chemin de randonnée. </p>
+                    <p class="active" data-slide="1">Une montagne culminant à 3776 m. Sa traduction Kanji signifie
+                        abondance et
+                        richesse. Il existe
+                        pour les plus aguerris un chemin de randonnée. </p>
+                    <p data-slide="2">Le célèbre passage piéton où tous les jours transitent 2,4 millions de personnes.
+                    </p>
+                    <p data-slide="3">Fondé sur le modèle de la tour Eiffel, la Tokyo Tower mesure 336m de haut. Elle
+                        offre un
+                        magnifique panorama.
+                    </p>
+                    <p data-slide="4">Une ville entre futur et passé, au détour de grands building on trouve de petites
+                        ruelles chargées d'Histoire</p>
+                    <p data-slide="5">
+                        Fondé en 628, le Sensō Ji est le plus vieux temple boudhiste de Tokyo. Il est dédie à la déesse
+                        Kanon
+                    </p>
                 </div>
                 <div class="years">
-                    <h2>Incontournable</h2>
+                    <h2 class="active" data-slide="1">Incontournable</h2>
+                    <h2 data-slide="2">Fulgurant</h2>
+                    <h2 data-slide="3">Impressionant</h2>
+                    <h2 data-slide="4">Futuriste</h2>
+                    <h2 data-slide="5">Enorme</h2>
+
                 </div>
             </div>
 
             <div id="right">
                 <div class="images">
-                    <img class="image" src="Images/chris-fowler-78XvFtNTCBw-unsplash.jpg" alt="">
+                    <img class="image active" data-slide-image="1" src="Images/chris-fowler-78XvFtNTCBw-unsplash.jpg"
+                        alt="">
+                    <img class="image left" data-slide-image="2" src="Images/erik-eastman-4HG5hlhmZg8-unsplash.jpg"
+                        alt="">
+                    <img class=" image left" data-slide-image="3" src="Images/nathan-long-Is5YMVzpKIw-unsplash.jpg"
+                        alt="">
+                    <img class="image left" data-slide-image="4" alt=""
+                        src="Images/greg-jeanneau-7lYNPI6OpcA-unsplash.jpg">
+                    <img class="image left" src="Images/yu-kato-cddaZDt6uRw-unsplash.jpg" data-slide-image="5" alt="">
                 </div>
             </div>
         </section>
         <nav>
-            <div class="actions">
+            <div class=" actions">
                 <div class="left js-arrow-left">
-                    <img src="Images/VectorArrow.svg" alt="" onclick="toggle()">
+                    <img src="Images/VectorArrow.svg" alt="">
                 </div>
                 <div class="right js-arrow-right">
                     <img src="Images/VectorArrow.svg" alt="">
                 </div>
 
                 <ul class="steppers">
-                    <li class="active">
-
+                    <li data-slide-nav="1">
+                        <!-- <div class="line"></div> -->
                     </li>
-                    <li>
+                    <li data-slide-nav="2">
                         <div class="line"></div>
                     </li>
-                    <li>
+                    <li data-slide-nav="3">
                         <div class="line"></div>
                     </li>
-                    <li>
+                    <li data-slide-nav="4">
                         <div class="line"></div>
                     </li>
-                    <li>
+                    <li data-slide-nav="5">
                         <div class="line"></div>
                     </li>
                 </ul>
             </div>
         </nav>
     </main>
+
+    <script src="js/main.js"></script>
 </body>
 
 </html>
