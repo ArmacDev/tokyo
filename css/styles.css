@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
 body{
-    background-color: #fff;
+    
 }
 .to{
     font-family: 'Noto Sans JP', sans-serif;
@@ -31,7 +31,7 @@ a{
     left: 50%;
     animation: HeroSlideIn forwards .5s;
 }
-ul{
+ul:not(.steppers){
     list-style: none;
     display: flex;
     justify-content: center;
@@ -40,7 +40,7 @@ ul{
     
 
 }
-li {
+li:not(.s) {
     padding: 10px;
     font-family: 'Open Sans';
     
@@ -71,13 +71,13 @@ span{
     font-family: "Poppins";
 }
 
-input::placeholder{
+#searchBox::placeholder{
     color: red;
     font-weight: 400;
     font-family: 'Poppins';
     
 }
-input{
+input:not(.forrm){
     padding: 0 12px;
     height: 30px;
     border: none;
@@ -96,39 +96,6 @@ input{
     background: linear-gradient(90deg, rgba(219,111,38,1) 0%, rgba(209,156,27,1) 18%, rgba(111,87,189,1) 64%, rgba(188,25,240,1) 87%, rgba(0,0,0,1) 100%); 
 }
 
-
-
-
-a{
-    color: #000;
-}
-
-.h-left{
-    font-family: "Poppins";
-   
-}
-.container{
-    max-width: 1500px;
-    padding: 0 24px;
-}
-main .container{
-   display: grid;
-   grid-template-columns: repeat(12,1fr);
-    
-}
-.left{
-    height: 100%;
-    grid-column: 1/4;
-}
-.left h1{
-    font-size: 3rem;
-}
-.right{
-    height: 100%;
-    grid-column: 5/13;
-    display: flex;
-    gap: 2rem;
-}
 .pic{
     
     background-position: center top;
@@ -144,6 +111,39 @@ main .container{
     width: 40%;
     cursor: pointer;
 }
+main .container{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+     
+ }
+
+a{
+    color: #000;
+}
+
+.h-left{
+    font-family: "Poppins";
+   
+}
+.container{
+    max-width: 1500px;
+    padding: 0 24px;
+}
+
+.left{
+    height: 100%;
+    grid-column: 1/4;
+}
+.left h1{
+    font-size: 3rem;
+}
+.right{
+    height: 100%;
+    grid-column: 5/13;
+    display: flex;
+    gap: 2rem;
+}
+
 .nav-a:hover{
     text-decoration: underline;
     text-underline-offset: 20px;
@@ -171,4 +171,33 @@ footer{
    font-family: 'Open Sans';
    text-align: center;
     
+}
+
+
+h1 > span{
+    overflow: hidden;
+    display: block;
+    padding: 0px;
+    
+}
+h1 > span:nth-child(2) span {
+    animation-delay: 200ms;
+}
+h1 > span:nth-child(3) span{
+    animation-delay: 400ms;
+}
+h1 > span > span {
+  display: block;
+  animation: spanFadeIn 500ms ease forwards;
+  transform: translateY(100%);
+  padding: 0;
+}
+
+@keyframes spanFadeIn {
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(0);
+    }
 }

@@ -5,21 +5,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/photo.css">
+
     <title>Document</title>
 
 </head>
 
 <body>
     <main>
+
+        <nav>
+            <div id="container">
+                <div class="l">
+                    <h1 class="to"> <span class="logo"></span> 東京都</h1>
+                </div>
+                <ul class="nav">
+                    <li class="nav-li"><a href="index.html" class="nav-a">Accueil</a></li>
+                    <li class="nav-li"><a href="attractions.html" class="nav-a">Les Attractions</a></li>
+                    <li class="nav-li"><a href="photo.html" class="nav-a">Galerie Photo</a></li>
+                    <li class="nav-li"><a href="nc.html" class="nav-a">Nous Contacter</a></li>
+                </ul>
+                <div class="search-bar">
+                    <input type="text" placeholder="Recherche ..." id="searchBox" onchange="SearchQuery(this.value)">
+                    <span><a href="http://www.google.com" onclick="buttonClick()" target="_blank"
+                            id="searchButton">O</a></span>
+                </div>
+            </div>
+        </nav>
         <section>
             <div id="left">
                 <div class="titles">
-                    <h1 data-slide="1" class="active">Mont Fuji</h1>
-                    <h1 data-slide="2">Shibuya</h1>
-                    <h1 data-slide="3">Tokyo Tower</h1>
-                    <h1 data-slide="4">Kabuki</h1>
-                    <h1 data-slide="5">Sensō Ji</h1>
+                    <h1 data-slide="1" class="active titre">Mont Fuji</h1>
+                    <h1 data-slide="2" class="titre">Shibuya</h1>
+                    <h1 data-slide="3" class="titre">Tokyo Tower</h1>
+                    <h1 data-slide="4" class="titre">Kabuki</h1>
+                    <h1 data-slide="5" class="titre">Sensō Ji</h1>
                 </div>
                 <div class="description">
                     <p class="active" data-slide="1">Une montagne culminant à 3776 m. Sa traduction Kanji signifie
@@ -73,19 +94,19 @@
                 </div>
 
                 <ul class="steppers">
-                    <li data-slide-nav="1">
+                    <li class="s" data-slide-nav="1">
                         <!-- <div class="line"></div> -->
                     </li>
-                    <li data-slide-nav="2">
+                    <li class="s" data-slide-nav="2">
                         <div class="line"></div>
                     </li>
-                    <li data-slide-nav="3">
+                    <li class="s" data-slide-nav="3">
                         <div class="line"></div>
                     </li>
-                    <li data-slide-nav="4">
+                    <li class="s" data-slide-nav="4">
                         <div class="line"></div>
                     </li>
-                    <li data-slide-nav="5">
+                    <li class="s" data-slide-nav="5">
                         <div class="line"></div>
                     </li>
                 </ul>

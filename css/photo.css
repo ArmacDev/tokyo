@@ -7,7 +7,7 @@ body{
     color: #FFF38A;
     overflow: hidden;
 }
-h1{
+.titre{
     font-weight: 800;
     font-size: 4em;
     color : #FFF38A;
@@ -15,9 +15,12 @@ h1{
 main{
     max-width: 1280px;
     margin: auto;
-    margin-top: 158px;
+   
     padding: 0 24px;
     
+}
+.to{
+    color: #fff;
 }
 section{
     display: flex;
@@ -45,7 +48,7 @@ section{
     white-space: nowrap;
     left: 0;
 }
-h1:not(.active){
+.titre:not(.active){
     opacity: 0;
     transform: translate3d(100%,0,0);
 }
@@ -107,6 +110,9 @@ nav.actions img{
 .left, .right{
     display: inline-block;
 }
+.nav-a{
+    color: #fff;
+}
 .description{
     margin-bottom: auto;
     position: relative;
@@ -124,7 +130,7 @@ p:not(.active){
     opacity: 0;
     transform: translate3d(100%,0,0);
 }
-ul{
+.steppers{
     display: flex;
     justify-content: space-between;
     flex-grow: 1;
@@ -149,7 +155,7 @@ ul li{
     transform-origin: left;
     transition: transform 1s ease-out;
 }
-li:after{
+.s:after{
     content: '';
     right: 0;
     position: absolute;
@@ -165,11 +171,11 @@ li.active .line:after{
     transform: scaleX(1);
     
 }
-li.active:after{
+.s.active:after{
     opacity: 1;
 }
 
-li:first-child::before{
+.s:first-child::before{
     content: none;
 }
 
@@ -188,4 +194,14 @@ li:first-child::before{
 
 .js-arrow-left{
     opacity: 1;
+}
+#searchButton{
+    color: #fff;
+}
+input{
+    background-color: #060447;
+    color: #fff;
+}
+.search-bar{
+   border: 2px solid white;
 }

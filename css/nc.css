@@ -3,11 +3,10 @@
 body{
     font-family: 'Montserrat';
     font-weight: 400;
+    padding: 0 12px;
 }
 
-main{
-    max-width: 1280px;
-}
+
 input[type=text]{
     width: 100%;
     margin: 8px 0;
@@ -35,7 +34,7 @@ textarea{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #52ade2;
+    background-color: #2980b9;
     padding: 10px 0;
     border: none;
     border-radius: 5px;
@@ -60,11 +59,30 @@ input::placeholder, textarea::placeholder{
 }
 
 #form{
-    position: absolute;
-left: 50%;
-top: 50%;
-transform: translate(-50%, -50%);
+    grid-column: 5/10;
+    width: auto;
+    gap: 2rem;
 padding: 10px;
 border-radius: 15px;
+align-items: center;
 box-shadow: 1px 2px 3px 4px rgba(20,20,20,0.4);
+}
+
+h2{
+    font-weight: normal;
+    padding: 0 12px;
+}
+.maap{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    
+}
+#map{
+        height: 50%;
+        width: 25%;
+        position: absolute;
+        grid-column: 1/4;
+}
+h2{
+    padding: 10px;
 }

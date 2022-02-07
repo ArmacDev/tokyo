@@ -3,12 +3,31 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf8">
 <title>Document</title>
 <link rel="stylesheet" href="css/attraction.css">
+<link rel="stylesheet" href="css/styles.css">
+<script src="js/search.js"></script>
 </head>
 
 <body>
-    <h1>Les Attractions</h1>
-    <p>Les principales attractions se retrouvent autour de la Yamanote Line du réseau sousterrain, véritable cercle
-        reliant les point d'interet de la ville</p>
+    <nav>
+        <div id="container">
+            <div class="l">
+                <h1 class="to"> <span class="logo"></span> 東京都</h1>
+            </div>
+            <ul>
+                <li><a href="index.html" class="nav-a">Accueil</a></li>
+                <li><a href="attractions.html" class="nav-a">Les Attractions</a></li>
+                <li><a href="photo.html" class="nav-a">Galerie Photos</a></li>
+                <li><a href="nc.html" class="nav-a">Nous Contacter</a></li>
+            </ul>
+            <div class="search-bar">
+                <input type="text" placeholder="Recherche ..." id="searchBox" onchange="SearchQuery(this.value)">
+                <span><a href="http://www.google.com" onclick="buttonClick()" target="_blank"
+                        id="searchButton">O</a></span>
+            </div>
+        </div>
+    </nav>
+    <p>Les principales attractions se retrouvent autour de la Yamanote Ligne du réseau souterrain, cercle urbain
+        reliant les points d'interet de la ville</p>
     <div class="tube">
         <img src="Images/YAMANOTE_LINE.jpg">
     </div>
