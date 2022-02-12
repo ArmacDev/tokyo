@@ -6,3 +6,17 @@ body{
     font-family: 'Montserrat';
 }
 
+nav{
+    position: fixed;
+    background-color: #fff;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    
+}

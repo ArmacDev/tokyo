@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf8">
-<title>Document</title>
+<title>Les attractions</title>
 <link rel="stylesheet" href="css/attraction.css">
 <link rel="stylesheet" href="css/styles.css">
 <script src="js/search.js"></script>
+<link rel="shortcut icon" href="Images/favicon.png" type="image/x-icon">
 </head>
 
 <body>
+
     <nav>
         <div id="container">
             <div class="l">
@@ -26,11 +28,35 @@
             </div>
         </div>
     </nav>
-    <p>Les principales attractions se retrouvent autour de la Yamanote Ligne du réseau souterrain, cercle urbain
-        reliant les points d'interet de la ville</p>
-    <div class="tube">
-        <img src="Images/YAMANOTE_LINE.jpg">
-    </div>
+    <main>
+        <div class="left">
+            <p>Les principales attractions se retrouvent autour de la Yamanote Ligne du réseau souterrain, cercle urbain
+                reliant les points d'interet de la ville</p> <br>
+            <p>Vous pouvez cliquer sur n'importe quelle station du plan pour avoir des informations sur le quartier</p>
+        </div>
+        <div class="tube">
+            <img src="Images/YAMANOTE_LINE.jpg" usemap="#metro">
+        </div>
+        <map name="metro">
+            <area shape="rect" coords="183,52,333,80" href="https://fr.wikipedia.org/wiki/Ikebukuro" target="_blank"
+                alt="">
+            <area shape="rect" coords="52,231,199,271" target="_blank" href="https://fr.wikipedia.org/wiki/Shinjuku"
+                alt="">
+
+            <area shape="rect" coords="62,388,202,415" target="_blank" href="https://fr.wikipedia.org/wiki/Shibuya"
+                alt="">
+            <area shape="rect" coords="295,576,444,602" href="https://fr.wikipedia.org/wiki/Shinagawa" target="_blank"
+                alt="">
+            <area shape="rect" coords="616,454,730,483" target="_blank"
+                href="https://fr.wikipedia.org/wiki/Gare_de_Tokyo" alt="">
+            <area shape="rect" coords="662,253,767,281" target="_blank" href="https://fr.wikipedia.org/wiki/Gare_d'Ueno"
+                alt="">
+            <area shape="circle" coords="709,359,10" href="https://fr.wikipedia.org/wiki/Akihabara" target="_blank"
+                alt="">
+            <area shape="circle" coords="130,355,10" target="_blank" href="https://fr.wikipedia.org/wiki/Harajuku"
+                alt="">
+        </map>
+    </main>
 </body>
 
 </html>
